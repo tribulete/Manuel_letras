@@ -2,45 +2,43 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Letra de la Canción</title>
+  <title>Canción</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="contenido">Cargando...</div>
+  <h1 id="titulo"></h1>
+  <div id="contenido"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const fichero = params.get("fichero");
-    const duracionSegundos = parseFloat(params.get("duracion")) || 60;
+    const duracion = parseInt(params.get("duracion") || "120", 10); // en segundos
 
-    fetch(fichero)
-      .then(response => response.text())
-      .then(markdown => {
-        const html = marked.parse(markdown);
-        document.getElementById("contenido").innerHTML = html;
+    document.getElementById("titulo").textContent = fichero.replace(/_/g, ' ').replace('.md', '');
 
-        setTimeout(() => {
-          const totalMs = duracionSegundos * 1000;
-          const intervalo = 30;
-          const pasos = totalMs / intervalo;
-          const scrollTotal = document.body.scrollHeight - window.innerHeight;
-          const pixelesPorPaso = scrollTotal / pasos;
+    async function cargarLetra() {
+      const response = await fetch(fichero);
+      const markdown = await response.text();
+      const html = marked.parse(markdown);
+      const contenedor = document.getElementById("contenido");
+      contenedor.innerHTML = html;
 
-          let actual = 0;
-          function autoScroll() {
-            actual += pixelesPorPaso;
-            window.scrollTo({ top: actual, behavior: "smooth" });
+      // Auto scroll
+      const totalHeight = contenedor.scrollHeight - window.innerHeight;
+      const intervalo = 20; // ms
+      const pasos = (duracion * 1000) / intervalo;
+      const incremento = totalHeight / pasos;
 
-            if ((window.innerHeight + window.scrollY) < document.body.scrollHeight) {
-              setTimeout(autoScroll, intervalo);
-            }
-          }
-          autoScroll();
-        }, 500);
-      });
-  });
+      let scroll = 0;
+      const scrollInterval = setInterval(() => {
+        scroll += incremento;
+        window.scrollTo({ top: scroll, behavior: "smooth" });
+        if (scroll >= totalHeight) clearInterval(scrollInterval);
+      }, intervalo);
+    }
+
+    cargarLetra();
   </script>
 </body>
 </html>

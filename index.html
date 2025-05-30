@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Letras de Canciones</title>
+  <meta charset="UTF-8">
+  <title>Listado de canciones</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Letras de Canciones</h1>
+  <h1>Lista de canciones</h1>
   <ul id="lista-canciones"></ul>
-  <div id="contenido-cancion"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    async function cargarCanciones() {
+      const response = await fetch('config.csv');
+      const texto = await response.text();
+      const lineas = texto.trim().split('\\n').filter(l => l);
+      const datos = lineas.map(l => l.split(';'));
+
+      datos.sort((a, b) => parseInt(a[0]) - parseInt(b[0]));
+
+      const lista = document.getElementById("lista-canciones");
+
+      for (const [orden, duracion, nombre, fichero] of datos) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = `cancion.html?fichero=${fichero}&duracion=${duracion}`;
+        a.textContent = nombre;
+        li.appendChild(a);
+        lista.appendChild(li);
+      }
+    }
+
+    cargarCanciones();
+  </script>
 </body>
 </html>

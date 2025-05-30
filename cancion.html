@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Letra de la Canción</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="contenido">Cargando...</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const fichero = params.get("fichero");
+    const duracionSegundos = parseFloat(params.get("duracion")) || 60;
+
+    fetch(fichero)
+      .then(response => response.text())
+      .then(markdown => {
+        const html = marked.parse(markdown);
+        document.getElementById("contenido").innerHTML = html;
+
+        setTimeout(() => {
+          const totalMs = duracionSegundos * 1000;
+          const intervalo = 30;
+          const pasos = totalMs / intervalo;
+          const scrollTotal = document.body.scrollHeight - window.innerHeight;
+          const pixelesPorPaso = scrollTotal / pasos;
+
+          let actual = 0;
+          function autoScroll() {
+            actual += pixelesPorPaso;
+            window.scrollTo({ top: actual, behavior: "smooth" });
+
+            if ((window.innerHeight + window.scrollY) < document.body.scrollHeight) {
+              setTimeout(autoScroll, intervalo);
+            }
+          }
+          autoScroll();
+        }, 500);
+      });
+  });
+  </script>
+</body>
+</html>

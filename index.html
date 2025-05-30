@@ -1,36 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Listado de canciones</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina la Letra</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos básicos para que se vea un poco mejor */
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh; /* Cambio a min-height para mejor visualización */
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box; /* Para incluir padding en el cálculo del tamaño */
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .letra-display {
+            font-size: 5em; /* Tamaño más grande para la letra */
+            font-weight: bold;
+            color: #007bff;
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            min-width: 100px; /* Ancho mínimo para la caja de la letra */
+            display: inline-block; /* Para que el borde se ajuste al contenido */
+            background-color: #e7f3ff;
+        }
+        input[type="text"] {
+            padding: 12px;
+            margin: 15px 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            text-align: center; /* Centrar texto en el input */
+            text-transform: uppercase; /* Para que el usuario vea mayúsculas al escribir */
+            width: 80px; /* Ancho ajustado para una letra */
+        }
+        button {
+            padding: 12px 20px;
+            margin: 10px 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button#nuevaLetraBtn { /* Estilo diferente para el botón de nueva letra */
+            background-color: #28a745; /* Verde */
+        }
+        button#nuevaLetraBtn:hover {
+            background-color: #1e7e34;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            min-height: 1.5em; /* Para evitar saltos de diseño cuando está vacío */
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-  <h1>Lista de canciones</h1>
-  <ul id="lista-canciones"></ul>
+    <div class="container">
+        <h1>Adivina la Letra</h1>
 
-  <script>
-    async function cargarCanciones() {
-      const response = await fetch('config.csv');
-      const texto = await response.text();
-      const lineas = texto.trim().split(/\r?\n/).filter(l => l);
-      const datos = lineas.map(l => l.split(';'));
+        <div id="letraAleatoria" class="letra-display">?</div>
 
-      datos.sort((a, b) => parseInt(a[0]) - parseInt(b[0]));
+        <div>
+            <input type="text" id="textoUsuario" placeholder="Letra" maxlength="1">
+        </div>
 
-      const lista = document.getElementById("lista-canciones");
+        <div>
+            <button id="verificarBtn">Verificar</button>
+            <button id="nuevaLetraBtn">Nueva Letra</button>
+        </div>
 
-      for (const [orden, duracion, fichero] of datos) {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = `cancion.html?fichero=${fichero}&duracion=${duracion}`;
-        a.textContent = fichero.replace(/_/g, ' ').replace('.md', '');
-        li.appendChild(a);
-        lista.appendChild(li);
-      }
-    }
+        <p id="resultado"></p>
+    </div>
 
-    cargarCanciones();
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>

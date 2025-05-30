@@ -3,8 +3,8 @@ async function cargarCSV() {
   const texto = await res.text();
   const lineas = texto.trim().split('\n').slice(1);
   const canciones = lineas.map(linea => {
-    const [orden, nombre, archivo] = linea.split(';');
-    return { orden: Number(orden), nombre, archivo };
+    const [orden, nombre] = linea.split(';');
+    return { orden: Number(orden), nombre, archivo: `${nombre}.md` }; // Generar el nombre del archivo automáticamente
   }).sort((a, b) => a.orden - b.orden);
 
   const lista = document.getElementById('lista-canciones');

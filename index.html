@@ -20,14 +20,15 @@
 
       const lista = document.getElementById("lista-canciones");
 
-      for (const [orden, duracion, nombre, fichero] of datos) {
+      for (const [orden, duracion, fichero] of datos) {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = `cancion.html?fichero=${fichero}&duracion=${duracion}`;
-        a.textContent = nombre;
+        a.textContent = fichero; // Usa el nombre del fichero como título
         li.appendChild(a);
         lista.appendChild(li);
       }
+
     }
 
     cargarCanciones();

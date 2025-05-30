@@ -1,23 +1,95 @@
+/* style.css */
+
+/* Reset de márgenes para cálculos de scroll precisos */
+html, body {
+  margin: 0;
+  padding: 2em;
+}
+
+/* Estilo general del body */
 body {
   font-family: sans-serif;
-  padding: 1em;
-  background-color: #f5f5f5;
+  line-height: 1.6;
+  background-color: #fdfdfd;
   color: #333;
 }
 
+/* Título principal */
 h1 {
-  font-size: 1.5em;
-  color: #222;
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
-.estrofa {
-  margin: 1em 0;
+/* Lista de canciones */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 2em;
+}
+
+li {
+  margin: 0.5em 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor del contenido de la canción */
+#contenido {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilos de Markdown renderizado */
+strong {
+  font-weight: bold;
+}
+
+em {
   font-style: italic;
 }
 
-.estribillo {
-  font-weight: bold;
-  background-color: #e0f7fa;
-  padding: 0.5em;
-  border-left: 4px solid #00acc1;
+code {
+  background: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Encabezados dentro de las letras */
+#contenido h2,
+#contenido h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Párrafos dentro de las letras */
+#contenido p {
+  margin-bottom: 1em;
+}
+
+/* Listas dentro de las letras */
+#contenido ul {
+  list-style: disc;
+  margin-left: 1.5em;
+  margin-bottom: 1em;
 }

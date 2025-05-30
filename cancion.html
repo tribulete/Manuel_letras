@@ -2,88 +2,66 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Canción</title>
-  <link rel="stylesheet" href="style.css"> </head>
+  <title>Letra de la Canción</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Asegúrate de que body no tenga márgenes extra */
+    body { margin: 0; padding: 2em; }
+  </style>
+</head>
 <body>
-  <h1 id="titulo"></h1>
+  <h1 id="titulo">Cargando...</h1>
   <div id="contenido"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-    const params = new URLSearchParams(window.location.search);
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(location.search);
     const fichero = params.get("fichero");
-    const duracion = parseInt(params.get("duracion") || "120", 10); // en segundos
+    const duracion = parseFloat(params.get("duracion")) || 60; // segundos
 
-    // Establecer el título de la canción
-    if (fichero) {
-        document.getElementById("titulo").textContent = fichero.replace(/_/g, ' ').replace('.md', '');
-    } else {
-        document.getElementById("titulo").textContent = "Canción no especificada";
-    }
+    // Mostrar título
+    const titulo = fichero.replace(/_/g, ' ').replace('.md', '');
+    document.getElementById("titulo").textContent = titulo;
 
-    async function cargarLetra() {
-      if (!fichero) {
-        document.getElementById("contenido").innerHTML = "<p>Error: No se especificó el fichero de la canción.</p>";
-        return;
-      }
+    // Cargar y convertir Markdown
+    fetch(fichero)
+      .then(r => r.text())
+      .then(md => {
+        document.getElementById("contenido").innerHTML = marked.parse(md);
 
-      // --- ESTA ES LA LÍNEA CORREGIDA SEGÚN TU INFORMACIÓN ---
-      const rutaCompletaFichero = `canciones/${fichero}`; // Usamos 'canciones/'
-      // ----------------------------------------------------
+        // Una vez inyectado el HTML, espera al próximo repaint
+        requestAnimationFrame(() => {
+          // Altura total de todo el documento
+          const totalHeight = document.documentElement.scrollHeight;
+          // Altura visible
+          const windowHeight = window.innerHeight;
+          // Cuánto hay que desplazar en total
+          const scrollDistance = totalHeight - windowHeight;
 
-      try {
-        const response = await fetch(rutaCompletaFichero); // Usamos la ruta completa
+          if (scrollDistance <= 0) return; // no hay scroll posible
 
-        if (!response.ok) {
-          // Si la respuesta no es exitosa (ej. 404 Not Found)
-          throw new Error(`Error al cargar el fichero: ${response.status} ${response.statusText}. Se intentó cargar desde: ${rutaCompletaFichero}`);
-        }
+          const totalMs = duracion * 1000;
+          const intervalMs = 20;               // frecuencia de paso (20 ms)
+          const steps = totalMs / intervalMs;  // número de pasos
+          const stepPx = scrollDistance / steps;
 
-        const markdown = await response.text();
-        const html = marked.parse(markdown); // Usar marked.parse()
-        const contenedor = document.getElementById("contenido");
-        contenedor.innerHTML = html;
-
-        // Auto scroll
-        if (contenedor.innerHTML.trim() !== "") {
-            setTimeout(() => {
-                const viewportHeight = window.innerHeight;
-                const contentHeight = contenedor.scrollHeight;
-                const totalScrollableHeight = contentHeight - viewportHeight;
-
-                // Asegurarse de que solo hacemos scroll si hay contenido que sobrepasa la ventana
-                if (totalScrollableHeight <= 0) return;
-
-                const scrollDurationMs = duracion * 1000;
-                const scrollIntervalMs = 20; // Intervalo de actualización del scroll en ms
-                
-                // Si la duración es 0 o negativa, no hacer scroll animado
-                if (scrollDurationMs <= 0) {
-                    window.scrollTo({ top: totalScrollableHeight, behavior: "smooth" }); // Ir al final directamente
-                    return;
-                }
-
-                const numberOfIntervals = scrollDurationMs / scrollIntervalMs;
-                const scrollIncrement = totalScrollableHeight / numberOfIntervals;
-
-                let currentScrollPosition = 0;
-                
-                if (window.scrollIntervalId) {
-                    clearInterval(window.scrollIntervalId);
-                }
-
-                window.scrollIntervalId = setInterval(() => {
-                    currentScrollPosition += scrollIncrement;
-                    if (currentScrollPosition >= totalScrollableHeight) {
-                        window.scrollTo({ top: totalScrollableHeight, behavior: "smooth" });
-                        clearInterval(window.scrollIntervalId);
-                    } else {
-                        window.scrollTo({ top: currentScrollPosition, behavior: "smooth" });
-                    }
-                }, scrollIntervalMs);
-            }, 100); // Esperar 100ms para que el DOM se actualice
-        }
-
-      } catch (error) {
-        console.error("Error en cargarLetra:", error);
-        document.getElementById("contenido").innerHTML = `<p>No se pudo cargar la letra de la canción. Verifica que el archivo '${f
+          let scrolled = 0;
+          const timer = setInterval(() => {
+            // mueve el scroll relativo
+            window.scrollBy(0, stepPx);
+            scrolled += stepPx;
+            if (scrolled >= scrollDistance) {
+              clearInterval(timer);
+            }
+          }, intervalMs);
+        });
+      })
+      .catch(err => {
+        document.getElementById("contenido").textContent = "Error cargando la letra.";
+        console.error(err);
+      });
+  });
+  </script>
+</body>
+</html>

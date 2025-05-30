@@ -24,7 +24,7 @@ async function cargarCancion(archivo, tiempo) {
   const contenido = document.getElementById('contenido-cancion');
   contenido.innerHTML = marked.parse(markdown);
 
-  // Desplazamiento automático
+  // Desplazamiento automáticor
   contenido.scrollTo(0, 0); // Reinicia el scroll al inicio
   const totalHeight = contenido.scrollHeight - contenido.clientHeight;
   const step = totalHeight / (tiempo * 60); // Calcula el paso por frame (60 FPS)

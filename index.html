@@ -13,7 +13,7 @@
     async function cargarCanciones() {
       const response = await fetch('config.csv');
       const texto = await response.text();
-      const lineas = texto.trim().split('\\n').filter(l => l);
+      const lineas = texto.trim().split(/\r?\n/).filter(l => l);
       const datos = lineas.map(l => l.split(';'));
 
       datos.sort((a, b) => parseInt(a[0]) - parseInt(b[0]));
@@ -24,11 +24,10 @@
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = `cancion.html?fichero=${fichero}&duracion=${duracion}`;
-        a.textContent = fichero; // Usa el nombre del fichero como título
+        a.textContent = fichero.replace(/_/g, ' ').replace('.md', '');
         li.appendChild(a);
         lista.appendChild(li);
       }
-
     }
 
     cargarCanciones();

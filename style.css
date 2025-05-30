@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+  padding: 1em;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #222;
+}
+
+.estrofa {
+  margin: 1em 0;
+  font-style: italic;
+}
+
+.estribillo {
+  font-weight: bold;
+  background-color: #e0f7fa;
+  padding: 0.5em;
+  border-left: 4px solid #00acc1;
+}

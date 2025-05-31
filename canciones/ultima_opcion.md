@@ -1,7 +1,7 @@
 # Última opción  
-Autor: Juan Manuel Cano Lorite  
+**Autor: Juan Manuel Cano Lorite**
 
-[ESTROFA 1]  
+## [ESTROFA 1]  
 Bien, puede que sí o puede que no,  
 puede que sea tu última opción.  
 
@@ -17,7 +17,7 @@ estuve vendido, suspendido, a tus pies.
 Quise sentir, quise reír,  
 tenerlo todo abrazado a ti.  
 
-[ESTRIBILLO]  
+## [ESTRIBILLO]  
 Agotaste tu tiempo,  
 he borrado tu imagen, no hay más.  
 
@@ -30,14 +30,14 @@ has pasado a otra dimensión.
 Ahora no, sí que no,  
 ya no vuelvas, ya no tienes opción.  
 
-[PUENTE]  
+## [PUENTE]  
 Así que haz lo que quieras,  
 no vuelvas aquí.  
 
 Sal de mi mente,  
 no hay sitio para ti.  
 
-[ESTROFA 2]  
+## [ESTROFA 2]  
 Bien, puede que sí o puede que no,  
 puede que sea tu última opción.  
 

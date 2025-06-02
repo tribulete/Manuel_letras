@@ -1,27 +1,35 @@
-async function cargarCSV() {
-  const res = await fetch('config.csv');
-  const texto = await res.text();
-  const lineas = texto.trim().split('\n').slice(1);
-  const canciones = lineas.map(linea => {
-    const [orden, nombre, archivo] = linea.split(';');
-    return { orden: Number(orden), nombre, archivo };
-  }).sort((a, b) => a.orden - b.orden);
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('config.csv')
+    .then(response => response.text())
+    .then(data => {
+      const lineas = data.trim().split('\n');
+      const encabezado = lineas.shift().split(';'); // Ignoramos la cabecera: orden;nombre;tiempo
 
-  const lista = document.getElementById('lista-canciones');
-  lista.innerHTML = '';
-  canciones.forEach(cancion => {
-    const li = document.createElement('li');
-    li.textContent = cancion.nombre;
-    li.style.cursor = 'pointer';
-    li.onclick = () => cargarCancion(cancion.archivo);
-    lista.appendChild(li);
-  });
-}
+      const canciones = lineas.map(linea => {
+        const campos = linea.split(';');
+        const orden = parseInt(campos[0], 10);
+        const nombre = campos[1];
+        const tiempo = parseInt(campos[2], 10); // Se ignora por ahora
+        const archivo = `${nombre}.md`; // Construimos el nombre del fichero
 
-async function cargarCancion(archivo) {
-  const res = await fetch(`canciones/${archivo}`);
-  const markdown = await res.text();
-  document.getElementById('contenido-cancion').innerHTML = marked.parse(markdown);
-}
+        return { orden, nombre, archivo };
+      });
 
-cargarCSV();
+      // Ordenamos por el campo 'orden'
+      canciones.sort((a, b) => a.orden - b.orden);
+
+      // Mostramos la lista de canciones en el HTML
+      const lista = document.getElementById('lista-canciones');
+      canciones.forEach(cancion => {
+        const li = document.createElement('li');
+        const enlace = document.createElement('a');
+        enlace.href = `cancion.html?archivo=${encodeURIComponent(cancion.archivo)}`;
+        enlace.textContent = cancion.nombre.replace(/_/g, ' '); // Para mostrarlo más legible
+        li.appendChild(enlace);
+        lista.appendChild(li);
+      });
+    })
+    .catch(error => {
+      console.error('Error al cargar config.csv:', error);
+    });
+});

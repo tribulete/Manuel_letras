@@ -47,4 +47,5 @@ hiberno……..
 Hiberno, hiberno, hiberno... (x4)
 
 En este infierno quién está cuerdo
-un puto infierno yo soy mi dueño (no estoy enfermo) (x4)
+un puto infierno yo soy mi dueño 
+(no estoy enfermo) (x4)

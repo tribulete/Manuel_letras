@@ -38,7 +38,9 @@ Y si estoy fumando déjame caer
 
 **[Interludio 3]**  
 
-**[Estribillo 2] (x2)**  
+**[Solo Estribillo] (x2)**  
+
+**[Estribillo 2] (x3)**  
 Hiberno… escapo del bestiario  
 hiberno… encierro necesario  
 hiberno… para salir del averno  

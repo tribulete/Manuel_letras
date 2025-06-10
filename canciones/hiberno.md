@@ -44,8 +44,10 @@ hiberno… encierro necesario
 hiberno… para salir del averno  
 hiberno...
 
-Hiberno, hiberno, hiberno... (x4)  
+Hiberno, hiberno, hiberno... (x2)  
 En este infierno quién está cuerdo  
-un puto infierno yo soy mi dueño  
-(no estoy enfermo) (x4)  
+un puto infierno yo soy mi dueño (x2)  
+
+En este infierno quién está cuerdo  
+un puto infierno yo soy mi dueño (no estoy enfermo) (x4)  
 

@@ -5,7 +5,7 @@
 *(Instrumental)*  
 
 **[Estrofa 1]**  
-Enterrado en casa ya no sé qué hacer  
+Enterrado en casa ya no sé porqué  
 Y las horas pasan sin saber qué hacer  
 Si alguien llama no responderé  
 Esta mente extraña piérdete otra vez  

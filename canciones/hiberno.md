@@ -42,10 +42,10 @@ Y si estoy fumando déjame caer
 Hiberno… escapo del bestiario  
 hiberno… encierro necesario  
 hiberno… para salir del averno  
-hiberno……..  
+hiberno...
 
-Hiberno, hiberno, hiberno... (x4)
+Hiberno, hiberno, hiberno... (x4)  
+En este infierno quién está cuerdo  
+un puto infierno yo soy mi dueño  
+(no estoy enfermo) (x4)  
 
-En este infierno quién está cuerdo
-un puto infierno yo soy mi dueño 
-(no estoy enfermo) (x4)

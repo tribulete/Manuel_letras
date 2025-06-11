@@ -9,13 +9,13 @@ So you pulled my heart out
 And I don't mind bleedin'  
 Any old time, you keep me waitin'  
 Waitin', waitin'  
-Oh, whoa, oh  
-I got a love that keeps me waitin'  
-Oh, whoa, oh  
-I got a love that keeps me waitin'  
 
 **[Estribillo]**
 
+Oh, whoa, oh  
+I got a love that keeps me waitin'  
+Oh, whoa, oh  
+I got a love that keeps me waitin'  
 I'm a lonely boy  
 I'm a lonely boy  
 Oh, whoa, oh  
@@ -30,13 +30,13 @@ But I came to love you
 Am I born to bleed?  
 Any old time, you keep me waitin'  
 Waitin', waitin'  
-Oh, whoa, oh  
-I got a love that keeps me waitin'  
-Oh, whoa, oh  
-I got a love that keeps me waitin'  
 
 **[Estribillo]**
 
+Oh, whoa, oh  
+I got a love that keeps me waitin'  
+Oh, whoa, oh  
+I got a love that keeps me waitin'  
 I'm a lonely boy  
 I'm a lonely boy  
 Oh, whoa, oh  
@@ -45,13 +45,12 @@ I got a love that keeps me waitin'
 **[Puente]**
 
 Hey  
+
+**[Estribillo final]**  
 Oh, whoa, oh  
 I got a love that keeps me waitin'  
 Oh, whoa, oh  
 I got a love that keeps me waitin'  
-
-**[Estribillo final]**
-
 I'm a lonely boy  
 I'm a lonely boy  
 Oh, whoa, oh  

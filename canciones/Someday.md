@@ -15,12 +15,13 @@ Oh, my ex says I'm lacking in depth
 I will do my best  
 You say you wanna stay by my side  
 Darling, your head's not right  
-I see, alone we stand, together we fall apart  
+I see alone we stand together we fall apart  
 Yeah, I think I'll be alright  
 I'm working so I won't have to try so hard  
 Tables they turn sometimes  
 Oh, someday, yeah  
 No, I ain't wastin' no more time  
+
 Trying, trying  
 
 **[ESTROFA 3]**  
@@ -35,7 +36,7 @@ Oh, my ex says I'm lacking in depth
 Shit, I will try my best  
 You say you want to stay by my side  
 Darling, your head's not right  
-I see, alone we stand, together we fall apart  
+I see alone we stand together we fall apart  
 Yeah, I think I'll be all right  
 I'm working so I won't have to try so hard  
 Tables they turn sometimes  

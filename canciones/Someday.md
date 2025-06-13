@@ -27,8 +27,7 @@ Trying, trying
 **[ESTROFA 3]**  
 And now my fears, they come to me in threes  
 So I, sometimes  
-Say, "Fate, my friend  
-You say the strangest things  
+Say, "Fate, my friend, You say the strangest things  
 I find, sometimes"  
 
 **[ESTROFA 4]**  

@@ -1,58 +1,44 @@
 # Killing in the Name
 
-**[Intro / Estrofa 1]**  
-Some of those that work forces  
-Are the same that burn crosses  
-(Some lines repeat)
+Killing in the name of  
 
-**[Estribillo]**  
+Some of those that work forces  
+Are the same that burn crosses (x4)  
+
 Huh!  
 Killing in the name of  
 Killing in the name of  
 
-**[Verso 1 / Repetición]**  
-And now you do what they told ya  
-(Se repite varias veces)
+And now you do what they told ya (x12)  
 
-**[Verso 2]**  
 Those who died are justified  
 For wearing the badge, they're the chosen whites  
 You justify those that died  
-By wearing the badge, they're the chosen whites  
-(Se repite)
+By wearing the badge, they're the chosen whites (x2)  
 
-**[Refrán / Estribillo]**  
 Some of those that work forces  
-Are the same that burn crosses  
-(Se repite)
+Are the same that burn crosses (x4)  
 
-**[Estribillo]**  
 Huh!  
 Killing in the name of  
 Killing in the name of  
 
-**[Verso 3]**  
+And now you do what they told ya (x4)  
+And now you do what they told ya (Now you're under control) (x7)  
 And now you do what they told ya  
-(Now you're under control)  
-(Se repite)
 
-**[Verso 2 - Repetición]**  
 Those who died are justified  
 For wearing the badge, they're the chosen whites  
 You justify those that died  
-By wearing the badge, they're the chosen whites  
-(Se repite)
-
-**[Puente]**  
+By wearing the badge, they're the chosen whites (x2)  
+ 
 Come on  
 Huh!  
 Yeah  
 Come on  
-Huh!
+Huh!  
 
-**[Climax / Outro]**  
-Fuck you, I won't do what you tell me  
-(Se repite varias veces, aumentando en intensidad)
-
+Fuck you, I won't do what you tell me (x8)  
+Fuck you, I won't do what you tell me (x8)  
 Motherfucker  
-Huh!
+Huh! Huh! Huh!  

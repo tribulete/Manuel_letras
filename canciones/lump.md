@@ -1,4 +1,4 @@
-# Lump
+#  THE PRESIDENTS OF THE UNITED STATES OF AMERICA - Lump
 
 **[ESTROFA 1]**  
 Lump sat alone in a boggy marsh  
@@ -23,6 +23,10 @@ She's Lump, she's Lump
 She's in my head  
 She's Lump, she's Lump, she's Lump  
 She might be dead  
+Ou yeah  
+
+Paa pau papapararara (x3)  
+Paa pau  
 
 **[ESTROFA 3]**  
 Lump was limp and lonely and needed a shove  
@@ -35,9 +39,10 @@ She's Lump, she's Lump
 She's in my head  
 She's Lump, she's Lump, she's Lump  
 She might be dead  
+Auhh  
 
 **[PUENTE / OUTRO]**  
 Is this Lump out of my head, I think so  
-Is this Lump out of my head, I think so, yeah  
+Is this Lump out of my head, I think so, yeah, uuh
 Is this Lump out of my head, I think so  
 Is this Lump out of my head...

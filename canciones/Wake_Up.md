@@ -27,8 +27,8 @@ oooooh ooohhh
 
 **[Puente]**  
 With my lightnin' bolts a-glowin  
-I can see where I am goin' to be  
-When the reaper he reaches and touches my hand
+I can see where I am, goin' to, be  
+When the, reaper, he reaches, and touches my hand
 
 **[Outro]**  
 With my lightnin' bolts a-glowin'  

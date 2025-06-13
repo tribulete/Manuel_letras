@@ -11,7 +11,7 @@ About the joker and the thief in the night
 He's always laughing in the midst of power  
 Always living in the final hour  
 There is always sweet and sour  
-So we are not going home  
+So we, are not, going home  
 
 **[Estribillo]**  
 Can you see the joker flying over  
@@ -30,7 +30,7 @@ About the joker and the thief in the night
 All the people that you see in the night  
 Hold their dreams up to the light  
 The wild beast is searching for sight  
-And we are not going home  
+And we, are not, going home  
 
 **[Estribillo]**  
 Can you see the joker flying over  

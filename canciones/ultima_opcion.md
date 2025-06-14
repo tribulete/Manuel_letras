@@ -13,7 +13,8 @@ Quise vencer, quise correr,
 estuve vendido, suspendido a tus pies.  
 Quise sentir, quise reír,  
 tenerlo todo abrazado a ti.  
-
+  
+**(Puente)**  
 Agotaste tu tiempo,  
 he borrado tu imagen, no hay más.  
 He soñado algo nuevo,  

@@ -11,7 +11,6 @@ Aunque no es fácil nada para mí
 Ya no hay gravedad con la que luchar  
 en mi cápsula espacial  
 
-
 **[Estrofa 2]**  
 Sin tripulación tan solo estoy yo en el cosmos  
 estrellas y su luz jamás podré alcanzar  
@@ -23,17 +22,16 @@ No voy a volver
 Ya no hay gravedad con la que luchar  
 en mi cápsula espacial  
 
-**[PUENTE]**  
-despegamos  
+Despegamos  
 esto empieza ya  
 mi viaje sideral  
 
-**[FINAL]**
+**[FINAL]**  
 El viaje comenzó  
-estoy recorriendo el espacio exterior.  
+estoy recorriendo el espacio exterior (x2)  
+Una nueva sensación (aaaaah)   
+brota del traje hacia el interior (aaaaah) (x2)  
 
-Una nueva sensación  
-brota del traje hacia el interior  
-
-El viaje comenzó  
-estoy recorriendo el espacio exterior.  
+El viaje comenzó (aaaaah)   
+estoy recorriendo el espacio exterior (aaaaah) (x2)  
+Aaaaah (x)

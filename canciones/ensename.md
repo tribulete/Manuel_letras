@@ -1,31 +1,25 @@
 ## Enséñame  
-**[Autor]** Juan Manuel Pedre Torregrosa  
+**[Autor]** Juan Manuel - Pedre
 
 **[Intro: Guitarra]**  
 Enséñame en qué mundo estás  
 y viajaré  
 Demuéstrame que hay algo más  
 y espérate  
-para escapar…  
-
-**[Bajo]**  
+para escapar…  (bajo)  
 juntos al mar…  
 
-**[Percusión]**  
 Despiértate de este sueño ya  
 levántate para andar  
-y sécate las lágrimas  
-ya sabes que no volverá  
-aaaa…  
+y sécate tus lágrimas  
+ya sabes que no volverá… (percusión)  
 no volverá…  
 
-**[Teclado]**  
 Ayúdame a que tenga fe  
-para creer que te veré  
-y volar…  
+en que te veré  
+y volar… (teclado)  
 los dos sobre el mar…  
 
-**[Batería]**  
 Enséñame en qué mundo estás  
 y espérame  
 para caminar… (para cantar)  
@@ -43,11 +37,9 @@ Si tengo ganas de gritar
 Enséñame a respirar  
 ahora que tú ya no estás  
 Este dolor se sanará  
-si me haces ver  
+si me haces ver (bajada)  
 que aún puedo amar…  
 (una vez más) aaaa… aaa…  
-
-**[Bajada (todos)]**  
 
 **[Queda guitarra y batería suave]**  
 Enséñame que quedarán  
